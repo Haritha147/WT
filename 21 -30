@@ -1,0 +1,142 @@
+21.	HTML Frameset Example
+
+<!DOCTYPE html>
+
+<html>
+
+<frameset cols="50%,50%">
+
+  <frame src="left.html">   <frame src="right.html">
+
+</frameset>
+
+</html>
+
+22.	Embed Multimedia (Audio/Video)
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h2>Audio</h2>
+
+<audio controls>   <source src="audio.mp3" type="audio/mpeg">
+
+</audio>
+
+<h2>Video</h2>
+
+<video width="320" height="240" controls>   <source src="video.mp4" type="video/mp4">
+
+</video>
+
+</body>
+
+</html>
+
+23.	Java Servlet for Confirmed Dishes
+
+import java.io.*; import javax.servlet.*; import javax.servlet.http.*; public class DishServlet extends HttpServlet {   public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {     res.setContentType("text/html");     PrintWriter out = res.getWriter();     String[] dishes = req.getParameterValues("dish");     out.println("<h2>Selected Dishes:</h2>");     for (String dish : dishes) {       out.println("<p>" + dish + "</p>");     }
+
+  }
+
+}
+
+24.	JavaScript Date and Time
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h2>Date and Time</h2> <p id="datetime"></p> <script> document.getElementById("datetime").innerHTML = new Date(); </script>
+
+</body>
+
+</html>
+
+25.	JavaScript String Object Examples
+
+<!DOCTYPE html>
+
+<html>
+
+<body> <script> let str = "Hello"; document.write("Char at 1: " + str.charAt(1) + "<br>"); document.write("Unicode at 1: " + str.charCodeAt(1) + "<br>"); let joined = str.concat(" World"); document.write("Concatenated: " + joined + "<br>"); document.write("Unicode to String: " + String.fromCharCode(72) + "<br>"); document.write("Uppercase: " + str.toUpperCase()); </script>
+
+</body>
+
+</html>
+
+26.	External CSS Background Image
+
+<!-- HTML -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head> <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body> <h1>External Background Image</h1>
+
+</body>
+
+</html>
+
+/* style.css */ body {   background-image: url('bg.jpg');   background-size: cover; }
+
+27.	JSP Page View Counter
+
+<%@ page import="java.util.*" %>
+
+<% Integer count = (Integer)application.getAttribute("counter"); if(count == null) count = 1; else count++; application.setAttribute("counter", count); %>
+
+<html><body> <h2>View Count: <%= count %></h2>
+
+</body></html>
+
+28.	Student Registration using Servlet
+
+import java.io.*; import javax.servlet.*; import javax.servlet.http.*; public class StudentServlet extends HttpServlet {   public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {     res.setContentType("text/html");     PrintWriter out = res.getWriter();     String name = req.getParameter("name");     out.println("<h2>Student Name: " + name + "</h2>");   }
+
+}
+
+29.	Internal CSS Background Image
+
+<!DOCTYPE html>
+
+<html>
+
+<head> <style> body {   background-image: url('background.jpg');   background-size: cover; }
+
+</style>
+
+</head>
+
+<body> <h1>Internal Background Image</h1>
+
+</body>
+
+</html>
+
+30.	Employee Registration using JSP
+
+<%@ page import="java.util.*" %>
+
+<html><body>
+
+<form method="post"> Name: <input type="text" name="name"><br> <input type="submit">
+
+</form>
+
+<% String name = request.getParameter("name"); if(name != null) {   out.println("<h2>Employee Name: " + name + "</h2>"); }
+
+%>
+
+</body></html>
+
