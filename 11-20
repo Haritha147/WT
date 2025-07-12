@@ -1,0 +1,184 @@
+11.	Picture Slider with Radio Buttons
+
+<!DOCTYPE html>
+
+<html>
+
+<head> <style> img { width: 100%; height: 300px; } input[type=radio] { margin: 10px; } </style>
+
+</head>
+
+<body>
+
+<input 	type="radio" 	name="slider" 	onclick="document.getElementById('img').src='1.jpg'" checked>Image 1 <input type="radio" name="slider" onclick="document.getElementById('img').src='2.jpg'">Image 2 <img id="img" src="1.jpg" alt="Slider">
+
+</body>
+
+</html>
+
+12.	Internal CSS Style Sheet
+
+<!DOCTYPE html>
+
+<html>
+
+<head> <style> h1 { color: blue; } p { font-size: 14px; color: green; } </style>
+
+</head>
+
+<body>
+
+<h1>Title</h1> <p>This is a paragraph.</p>
+
+</body>
+
+</html>
+
+13.	Inline and Internal CSS
+
+<!DOCTYPE html>
+
+<html>
+
+<head> <style> h2 { color: red; } </style>
+
+</head>
+
+<body> <h1 style="color: blue;">Inline CSS</h1> <h2>Internal CSS</h2>
+
+</body>
+
+</html>
+
+14.	Absolute Positioning with CSS
+
+<!-- HTML -->
+
+<div class="container">
+
+  <div class="box1">Box 1</div>
+
+  <div class="box2">Box 2</div>
+
+</div>
+
+<!-- CSS --> .container { position: relative; height: 200px; } .box1 {   position: absolute; top: 20px; left: 20px;   background: red; width: 100px; height: 100px; } .box2 {   position: absolute; top: 50px; left: 50px;   background: blue; width: 100px; height: 100px; }
+
+15.	Background Repeat with CSS
+
+<!DOCTYPE html>
+
+<html>
+
+<head> <style> body {   background-image: url('pattern.png');   background-repeat: repeat-x; }
+
+</style>
+
+</head>
+
+<body> <h1>Background Repeat</h1>
+
+</body>
+
+</html>
+
+16.	Java Servlet for Employee Details
+
+import java.io.*; import javax.servlet.*; import javax.servlet.http.*; public class EmployeeServlet extends HttpServlet {   public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {     res.setContentType("text/html");     PrintWriter out = res.getWriter();
+
+    String name = req.getParameter("name");     String dept = req.getParameter("department");     out.println("<h1>Employee Details</h1>");     out.println("<p>Name: " + name + "</p>");     out.println("<p>Department: " + dept + "</p>");   }
+
+}
+
+17.	HTML Table for Mark List
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<table border="1">
+
+<tr><th>Name</th><th>Math</th><th>Science</th></tr>
+
+<tr><td>John</td><td>85</td><td>90</td></tr> <tr><td>Jane</td><td>88</td><td>95</td></tr>
+
+</table>
+
+</body>
+
+</html>
+
+18.	HTML Box Model
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style> .box {   width: 200px;   padding: 20px;   border: 5px solid red;   margin: 10px; }
+
+</style>
+
+</head>
+
+<body> <div class="box">Box Model Example</div>
+
+</body>
+
+</html>
+
+19.	Job Portal Web Page
+
+<!DOCTYPE html>
+
+<html>
+
+<head> <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Job Portal</h1>
+
+<form>
+
+  <label>Name:</label><input type="text"><br>
+
+  <label>Email:</label><input type="email"><br>   <input type="submit" value="Apply">
+
+</form>
+
+</body>
+
+</html>
+
+/* style.css */ body { font-family: Arial; background-color: #f0f0f0; } form { padding: 20px; background: white; border: 1px solid #ccc; }
+
+20.	HTML with Emojis and Positioning
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style> .icon {   font-size: 30px;   position: fixed;   top: 10px;   right: 10px; }
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Hello</h1>
+
+<div class="icon">ICON</div>
+
+</body>
+
+</html>
+
