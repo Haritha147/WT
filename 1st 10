@@ -1,0 +1,140 @@
+1.	HTML Page with Header Tags
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Header Tags Example</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Sample Page">
+
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+
+    <meta name="author" content="Author Name">
+
+    <link rel="stylesheet" href="style.css">     <script src="script.js"></script>
+
+</head>
+
+<body>     <h1>Main Content</h1>
+
+</body>
+
+</html>
+
+2.	JavaScript - Nearest Odd Number
+
+<script> function nearestOdd(num) {     let number = parseInt(num);     if (number % 2 === 0) {         number += 1;     }     return number; } let userNumber = prompt("Enter a number:"); alert("Nearest Odd: " + nearestOdd(userNumber)); </script>
+
+3.	HTML with Relative Positioning
+
+<!-- index.html -->
+
+<div class="parent">     <div class="child">Relatively Positioned</div>
+
+</div>
+
+<!-- style.css --> .parent {     position: relative;     height: 200px;     background-color: lightgrey; } .child {     position: relative;     top: 30px;     left: 50px;     background-color: lightblue;     padding: 10px; }
+
+4.	Java Servlet - Student Registration
+
+import java.io.*; import javax.servlet.*; import javax.servlet.http.*; public class StudentServlet extends HttpServlet {   public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {     res.setContentType("text/html");     PrintWriter out = res.getWriter();
+
+    String name = req.getParameter("name");     String id = req.getParameter("id");     out.println("<h1>Student Registered</h1>");     out.println("<p>Name: " + name + "</p>");     out.println("<p>ID: " + id + "</p>");   }
+
+}
+
+5.	Employee Registration Form (HTML + CSS)
+
+<!DOCTYPE html>
+
+<html>
+
+<head>   <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <form>     <label>Employer Name:</label><input type="text"><br>
+
+    <label>ID:</label><input type="text"><br>
+
+    <label>Address:</label><textarea></textarea><br>
+
+    <label>Department:</label><input type="text"><br>     <label>Mobile:</label><input type="tel"><br>     <label>City:</label>
+
+    <select>       <option>New York</option><option>London</option>
+
+    </select><br>     <input type="submit">
+
+  </form>
+
+</body>
+
+</html>
+
+/* style.css */ form {   background-color: #f9f9f9;   padding: 20px;   border-radius: 5px; }
+
+6.	HTML Elements with Class Selectors (CSS)
+
+<!DOCTYPE html>
+
+<html>
+
+<head>   <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="section">Section 1</div>
+
+  <div class="section">Section 2</div>
+
+</body>
+
+</html>
+
+/* style.css */ .section {   padding: 15px;   margin: 10px;   background-color: #eee; }
+
+7.	Float Positioning Example
+
+<!-- index.html -->
+
+<div class="left">Left Box</div> <div class="right">Right Box</div>
+
+<!-- style.css --> .left {   float: left;   width: 45%;   background-color: red;   height: 100px; } .right {   float: right;   width: 45%;   background-color: blue;   height: 100px; }
+
+8.	JavaScript Number Object Functions
+
+<script> let num = 123.45678; document.write("Exponential: " + num.toExponential(2) + "<br>"); document.write("Fixed: " + num.toFixed(2) + "<br>"); document.write("String: " + num.toString() + "<br>"); document.write("Negative Infinity: " + Number.NEGATIVE_INFINITY); </script>
+
+9.	Email Validation with JavaScript
+
+<script> function validateEmail(email) {   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;   return re.test(email); } let email = prompt("Enter your email:"); alert(validateEmail(email) ? "Valid" : "Invalid"); </script>
+
+10.	Background GIF with CSS
+
+<!DOCTYPE html>
+
+<html>
+
+<head> <style> body {   background-image: url('bg.gif');   background-size: 100% 100%;   opacity: 0.9;   transition: all 2s ease; }
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Background GIF</h1>
+
+</body>
+
+</html>
+
