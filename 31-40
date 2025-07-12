@@ -1,0 +1,314 @@
+31. Using Javascript, write a program to find the current Date and time of your system.
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h2>Current Date and Time</h2>
+
+<p id="currentTime"></p>
+
+<script>
+
+document.getElementById("currentTime").innerHTML = new Date();
+
+</script>
+
+</body>
+
+</html>
+
+32. Create a web page, display the html element with more animated effects.
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+@keyframes slidein {
+
+  from { margin-left: 100%; width: 300% }
+
+  to { margin-left: 0%; width: 100%; }
+
+}
+
+div {
+
+  width: 100px; height: 100px; background: red;
+
+  animation: slidein 3s infinite;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div></div>
+
+</body>
+
+</html>
+
+33. Create a student’s form registration for job portal and validate using internal Java Script.
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script>
+
+function validateForm() {
+
+  var name = document.forms["regForm"]["name"].value;
+
+  if (name == "") {
+
+    alert("Name must be filled out");
+
+    return false;
+
+  }
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<form name="regForm" onsubmit="return validateForm()">
+
+Name: <input type="text" name="name">
+
+<input type="submit">
+
+</form>
+
+</body>
+
+</html>
+
+34. To store multiple data items in a single variable we use a list. Describe the list of items which we use during the time of travel. Implement it in both ordered and unordered lists.
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h2>Travel Packing List</h2>
+
+
+
+<ol>
+
+  <li>Passport</li>
+
+  <li>Tickets</li>
+
+  <li>Clothes</li>
+
+</ol>
+
+
+
+<ul>
+
+  <li>Toothbrush</li>
+
+  <li>Snacks</li>
+
+  <li>Camera</li>
+
+</ul>
+
+
+
+</body>
+
+</html>
+
+35. Create a HTML web page, change the position of the element relative to the parent
+
+element and relative to itself using relative positioning with a CSS file. Also display the
+
+same elements with absolute positioning with difference.
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+.parent {
+
+  position: relative;
+
+  height: 300px;
+
+  border: 1px solid black;
+
+}
+
+.relative {
+
+  position: relative;
+
+  top: 20px;
+
+  left: 20px;
+
+  background: yellow;
+
+  width: 100px;
+
+  height: 100px;
+
+}
+
+.absolute {
+
+  position: absolute;
+
+  top: 50px;
+
+  left: 50px;
+
+  background: green;
+
+  width: 100px;
+
+  height: 100px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="parent">
+
+  <div class="relative">Relative</div>
+
+  <div class="absolute">Absolute</div>
+
+</div>
+
+</body>
+
+</html>
+
+36. Write an HTML program to add a background-image property using URL and style tag
+
+using external type of CSS.
+
+Html: <!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>External Background Image Example</h1>
+
+</body>
+
+</html>
+
+Css:
+
+body {
+
+  background-image: url('bg.jpg');
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+}
+
+37.Create a JSP program to count the number of clients viewed on your website.
+
+<%@ page import="java.util.*" %>
+
+<%
+
+Integer count = (Integer)application.getAttribute("counter");
+
+if(count == null) count = 0;
+
+count++;
+
+application.setAttribute("counter", count);
+
+%>
+
+<html><body>
+
+<h2>Client Count: <%= count %></h2>
+
+</body></html>
+
+38. Create a registration form for student database management and display the collected
+
+document by using servlet program.
+
+import java.io.*;
+
+import javax.servlet.*;
+
+import javax.servlet.http.*;
+
+
+
+public class StudentServlet extends HttpServlet {
+
+  public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+
+    res.setContentType("text/html");
+
+    PrintWriter out = res.getWriter();
+
+    String name = req.getParameter("name");
+
+    String id = req.getParameter("id");
+
+    
+
+    out.println("<html><body>");
+
+    out.println("<h1>Student Registration</h1>");
+
+    out.println("<p>Name: " + name + "</p>");
+
+    out.println("<p>ID: " + id + "</p>");
+
+    out.println("</body></html>");
+
+  }
+
+}
+
+
+
